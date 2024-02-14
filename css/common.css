@@ -1,0 +1,966 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: unset;
+  padding: unset;
+  outline: unset;
+  border: unset;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: unset;
+          box-shadow: unset;
+  font-variant-numeric: lining-nums;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+html, body {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+select,
+button {
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder, button::-webkit-input-placeholder {
+  color: inherit;
+}
+input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder, button::-moz-placeholder {
+  color: inherit;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder, select:-ms-input-placeholder, button:-ms-input-placeholder {
+  color: inherit;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder, button::-ms-input-placeholder {
+  color: inherit;
+}
+input::placeholder,
+textarea::placeholder,
+select::placeholder,
+button::placeholder {
+  color: inherit;
+}
+input option,
+textarea option,
+select option,
+button option {
+  background-color: inherit;
+}
+
+input, textarea, label {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+  resize: none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, label::-webkit-input-placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+input::-moz-placeholder, textarea::-moz-placeholder, label::-moz-placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder, label:-ms-input-placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder, label::-ms-input-placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+input::placeholder, textarea::placeholder, label::placeholder {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+}
+
+img {
+  vertical-align: middle;
+  font-style: italic;
+}
+
+:root {
+  --gap: 30px;
+  --full: minmax(var(--gap), 1fr);
+  --content: min(1540px, 100% - var(--gap) * 2);
+  --breakout: minmax(0, 190px);
+  --header-height: 103px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --gap: 20px;
+    --header-height: 80px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --gap: 10px;
+    --header-height: 105px;
+  }
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  src: url(../fonts/RobotoCondensed-Light.ttf);
+}
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Condensed";
+  font-weight: 400;
+  src: url(../fonts/RobotoCondensed-Regulra.ttf);
+}
+h1 {
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  h2 {
+    font-size: 45px;
+  }
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 1.2em;
+  text-transform: uppercase;
+}
+
+fieldset.text,
+fieldset.number,
+fieldset.textarea {
+  position: relative;
+  line-height: 1em;
+}
+fieldset.text input, fieldset.text textarea,
+fieldset.number input,
+fieldset.number textarea,
+fieldset.textarea input,
+fieldset.textarea textarea {
+  padding: 10px 15px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+fieldset.text input::-webkit-input-placeholder, fieldset.text textarea::-webkit-input-placeholder, fieldset.number input::-webkit-input-placeholder, fieldset.number textarea::-webkit-input-placeholder, fieldset.textarea input::-webkit-input-placeholder, fieldset.textarea textarea::-webkit-input-placeholder {
+  opacity: 0;
+}
+fieldset.text input::-moz-placeholder, fieldset.text textarea::-moz-placeholder, fieldset.number input::-moz-placeholder, fieldset.number textarea::-moz-placeholder, fieldset.textarea input::-moz-placeholder, fieldset.textarea textarea::-moz-placeholder {
+  opacity: 0;
+}
+fieldset.text input:-ms-input-placeholder, fieldset.text textarea:-ms-input-placeholder, fieldset.number input:-ms-input-placeholder, fieldset.number textarea:-ms-input-placeholder, fieldset.textarea input:-ms-input-placeholder, fieldset.textarea textarea:-ms-input-placeholder {
+  opacity: 0;
+}
+fieldset.text input::-ms-input-placeholder, fieldset.text textarea::-ms-input-placeholder, fieldset.number input::-ms-input-placeholder, fieldset.number textarea::-ms-input-placeholder, fieldset.textarea input::-ms-input-placeholder, fieldset.textarea textarea::-ms-input-placeholder {
+  opacity: 0;
+}
+fieldset.text input::placeholder, fieldset.text textarea::placeholder,
+fieldset.number input::placeholder,
+fieldset.number textarea::placeholder,
+fieldset.textarea input::placeholder,
+fieldset.textarea textarea::placeholder {
+  opacity: 0;
+}
+fieldset.text input[required] + label::after, fieldset.text textarea[required] + label::after,
+fieldset.number input[required] + label::after,
+fieldset.number textarea[required] + label::after,
+fieldset.textarea input[required] + label::after,
+fieldset.textarea textarea[required] + label::after {
+  content: " *";
+  color: red;
+}
+fieldset.text input:focus, fieldset.text textarea:focus,
+fieldset.number input:focus,
+fieldset.number textarea:focus,
+fieldset.textarea input:focus,
+fieldset.textarea textarea:focus {
+  border-color: blue;
+}
+fieldset.text input:focus + label, fieldset.text textarea:focus + label,
+fieldset.number input:focus + label,
+fieldset.number textarea:focus + label,
+fieldset.textarea input:focus + label,
+fieldset.textarea textarea:focus + label {
+  top: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  background-color: #f5f5f5;
+  color: blue;
+}
+fieldset.text input:not(:-moz-placeholder-shown) + label, fieldset.text textarea:not(:-moz-placeholder-shown) + label, fieldset.number input:not(:-moz-placeholder-shown) + label, fieldset.number textarea:not(:-moz-placeholder-shown) + label, fieldset.textarea input:not(:-moz-placeholder-shown) + label, fieldset.textarea textarea:not(:-moz-placeholder-shown) + label {
+  top: 0;
+  transform: translateY(-50%);
+  font-size: 12px;
+  transform-origin: left center;
+  background-color: #f5f5f5;
+}
+fieldset.text input:not(:-ms-input-placeholder) + label, fieldset.text textarea:not(:-ms-input-placeholder) + label, fieldset.number input:not(:-ms-input-placeholder) + label, fieldset.number textarea:not(:-ms-input-placeholder) + label, fieldset.textarea input:not(:-ms-input-placeholder) + label, fieldset.textarea textarea:not(:-ms-input-placeholder) + label {
+  top: 0;
+  -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+  font-size: 12px;
+  -ms-transform-origin: left center;
+      transform-origin: left center;
+  background-color: #f5f5f5;
+}
+fieldset.text input:not(:placeholder-shown) + label, fieldset.text textarea:not(:placeholder-shown) + label,
+fieldset.number input:not(:placeholder-shown) + label,
+fieldset.number textarea:not(:placeholder-shown) + label,
+fieldset.textarea input:not(:placeholder-shown) + label,
+fieldset.textarea textarea:not(:placeholder-shown) + label {
+  top: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-size: 12px;
+  -webkit-transform-origin: left center;
+      -ms-transform-origin: left center;
+          transform-origin: left center;
+  background-color: #f5f5f5;
+}
+fieldset.text input:not(:focus):not(:-moz-placeholder-shown):invalid, fieldset.text textarea:not(:focus):not(:-moz-placeholder-shown):invalid, fieldset.number input:not(:focus):not(:-moz-placeholder-shown):invalid, fieldset.number textarea:not(:focus):not(:-moz-placeholder-shown):invalid, fieldset.textarea input:not(:focus):not(:-moz-placeholder-shown):invalid, fieldset.textarea textarea:not(:focus):not(:-moz-placeholder-shown):invalid {
+  border-color: red;
+}
+fieldset.text input:not(:focus):not(:-ms-input-placeholder):invalid, fieldset.text textarea:not(:focus):not(:-ms-input-placeholder):invalid, fieldset.number input:not(:focus):not(:-ms-input-placeholder):invalid, fieldset.number textarea:not(:focus):not(:-ms-input-placeholder):invalid, fieldset.textarea input:not(:focus):not(:-ms-input-placeholder):invalid, fieldset.textarea textarea:not(:focus):not(:-ms-input-placeholder):invalid {
+  border-color: red;
+}
+fieldset.text input:not(:focus):not(:placeholder-shown):invalid, fieldset.text textarea:not(:focus):not(:placeholder-shown):invalid,
+fieldset.number input:not(:focus):not(:placeholder-shown):invalid,
+fieldset.number textarea:not(:focus):not(:placeholder-shown):invalid,
+fieldset.textarea input:not(:focus):not(:placeholder-shown):invalid,
+fieldset.textarea textarea:not(:focus):not(:placeholder-shown):invalid {
+  border-color: red;
+}
+fieldset.text input:not(:focus):not(:-moz-placeholder-shown):invalid + label, fieldset.text textarea:not(:focus):not(:-moz-placeholder-shown):invalid + label, fieldset.number input:not(:focus):not(:-moz-placeholder-shown):invalid + label, fieldset.number textarea:not(:focus):not(:-moz-placeholder-shown):invalid + label, fieldset.textarea input:not(:focus):not(:-moz-placeholder-shown):invalid + label, fieldset.textarea textarea:not(:focus):not(:-moz-placeholder-shown):invalid + label {
+  color: red;
+}
+fieldset.text input:not(:focus):not(:-ms-input-placeholder):invalid + label, fieldset.text textarea:not(:focus):not(:-ms-input-placeholder):invalid + label, fieldset.number input:not(:focus):not(:-ms-input-placeholder):invalid + label, fieldset.number textarea:not(:focus):not(:-ms-input-placeholder):invalid + label, fieldset.textarea input:not(:focus):not(:-ms-input-placeholder):invalid + label, fieldset.textarea textarea:not(:focus):not(:-ms-input-placeholder):invalid + label {
+  color: red;
+}
+fieldset.text input:not(:focus):not(:placeholder-shown):invalid + label, fieldset.text textarea:not(:focus):not(:placeholder-shown):invalid + label,
+fieldset.number input:not(:focus):not(:placeholder-shown):invalid + label,
+fieldset.number textarea:not(:focus):not(:placeholder-shown):invalid + label,
+fieldset.textarea input:not(:focus):not(:placeholder-shown):invalid + label,
+fieldset.textarea textarea:not(:focus):not(:placeholder-shown):invalid + label {
+  color: red;
+}
+fieldset.text label,
+fieldset.number label,
+fieldset.textarea label {
+  position: absolute;
+  top: calc(10px + 0.1em);
+  left: 15px;
+  pointer-events: none;
+  color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+fieldset.text.textarea label,
+fieldset.number.textarea label,
+fieldset.textarea.textarea label {
+  top: 10px;
+}
+
+fieldset.select {
+  position: relative;
+  line-height: 1.2em;
+  z-index: 1;
+}
+fieldset.select div.current {
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+fieldset.select div.current input {
+  display: none;
+}
+fieldset.select div.current input:checked + span {
+  display: block;
+}
+fieldset.select div.current span {
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 10px 15px;
+  width: 100%;
+}
+fieldset.select div.current img {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+}
+fieldset.select div.current:focus {
+  pointer-events: none;
+}
+fieldset.select div.current:focus span {
+  background-color: white;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+fieldset.select div.current:focus img {
+  -webkit-transform: translateY(-50%) rotate(180deg);
+      -ms-transform: translateY(-50%) rotate(180deg);
+          transform: translateY(-50%) rotate(180deg);
+}
+fieldset.select div.current:focus + div.list {
+  opacity: 1;
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+fieldset.select div.list {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: unset;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-animation-name: hideList;
+          animation-name: hideList;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: step-start;
+          animation-timing-function: step-start;
+}
+fieldset.select div.list label {
+  cursor: pointer;
+  display: block;
+  padding: 10px 15px;
+  background-color: white;
+}
+fieldset.select div.list label:hover, fieldset.select div.list label:focus {
+  background-color: #f5f5f5;
+}
+@-webkit-keyframes hideList {
+  from {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+@keyframes hideList {
+  from {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
+  }
+  to {
+    -webkit-transform: scaleY(0);
+            transform: scaleY(0);
+  }
+}
+
+fieldset.checkbox {
+  font-size: 14px;
+  line-height: 1.4em;
+}
+fieldset.checkbox label input {
+  display: none;
+}
+fieldset.checkbox label input:checked + span:before {
+  background-color: blue;
+  border-color: blue;
+}
+fieldset.checkbox label input:checked + span::after {
+  display: block;
+}
+fieldset.checkbox label span {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+  color: gray;
+}
+fieldset.checkbox label span::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 2px;
+}
+fieldset.checkbox label span::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0.6em;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-image: url(../images/checbox_tick.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+fieldset.radio {
+  line-height: 1.4em;
+}
+fieldset.radio label input {
+  display: none;
+}
+fieldset.radio label input:checked + span {
+  color: black;
+}
+fieldset.radio label input:checked + span:before {
+  background-color: blue;
+  border-color: blue;
+}
+fieldset.radio label input:checked + span::after {
+  display: block;
+}
+fieldset.radio label span {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+  color: gray;
+}
+fieldset.radio label span::before {
+  content: "";
+  position: absolute;
+  top: 0.6em;
+  left: 0;
+  display: block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 999px;
+}
+fieldset.radio label span::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 0.6em;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: white;
+  border-radius: 999px;
+}
+
+button, a.button {
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: #039571;
+  color: white;
+  font-size: 12px;
+  line-height: 1em;
+  border-radius: 999px;
+  padding: 15.5px 30px;
+  -webkit-box-shadow: 0px 29px 64px rgba(0, 0, 0, 0.15), 0px 116px 116px rgba(0, 0, 0, 0.13), 0px 261px 157px rgba(0, 0, 0, 0.08), 0px 464px 186px rgba(0, 0, 0, 0.02), 0px 725px 203px rgba(0, 0, 0, 0);
+          box-shadow: 0px 29px 64px rgba(0, 0, 0, 0.15), 0px 116px 116px rgba(0, 0, 0, 0.13), 0px 261px 157px rgba(0, 0, 0, 0.08), 0px 464px 186px rgba(0, 0, 0, 0.02), 0px 725px 203px rgba(0, 0, 0, 0);
+  min-width: 205px;
+  min-height: 45px;
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (max-width: 640px) {
+  button, a.button {
+    padding: 16px 20.5px;
+    font-size: 11px;
+  }
+}
+button:hover, a.button:hover {
+  background-color: #13DEAD;
+}
+button.light, a.button.light {
+  background-color: #13DEAD;
+}
+button.light:hover, a.button.light:hover {
+  background-color: #0bf0ba;
+}
+
+.animate {
+  opacity: 0;
+  -webkit-filter: blur(px);
+          filter: blur(px);
+  -webkit-transform: translateY(25%);
+      -ms-transform: translateY(25%);
+          transform: translateY(25%);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.animate.start {
+  opacity: 1;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  -webkit-transform: translateY(0%);
+      -ms-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+* {
+  line-height: 1.2em;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  -webkit-appearance: none;
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  background-color: #039571;
+  color: white;
+}
+
+section, header, footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: [full-start] var(--full) [breakout-start] var(--breakout) [content-start] var(--content) [content-end] var(--breakout) [breakout-end] var(--full) [full-end];
+}
+section > *, header > *, footer > * {
+  grid-column: content;
+}
+section .full, header .full, footer .full {
+  grid-column: full;
+}
+section .breakout, header .breakout, footer .breakout {
+  grid-column: breakout;
+}
+
+html:has(header.menu) {
+  overflow-y: hidden;
+  margin-right: var(--scrollbar-width);
+}
+
+header {
+  top: 0;
+  position: sticky;
+  background-color: white;
+  color: black;
+  height: 103px;
+  z-index: 999;
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (max-width: 1280px) {
+  header {
+    height: 80px;
+  }
+}
+@media (max-width: 960px) {
+  header {
+    height: auto;
+    margin-left: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+  }
+}
+header > div.container {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-columns: max-content 1fr max-content;
+  grid-gap: 40px;
+}
+@media (max-width: 1280px) {
+  header > div.container {
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 960px) {
+  header > div.container {
+    grid-template-columns: -webkit-max-content 1fr -webkit-max-content;
+    grid-template-columns: max-content 1fr max-content;
+  }
+}
+header a.logotype {
+  margin-bottom: -85px;
+  background-color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 190px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (max-width: 1280px) {
+  header a.logotype {
+    width: 106px;
+  }
+}
+@media (max-width: 960px) {
+  header a.logotype {
+    margin-bottom: unset;
+  }
+}
+header a.logotype img {
+  width: 100%;
+}
+header menu {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: auto;
+  gap: 40px;
+}
+@media (max-width: 1280px) {
+  header menu {
+    gap: unset;
+  }
+}
+@media (max-width: 960px) {
+  header menu {
+    display: none;
+  }
+}
+header menu a {
+  position: relative;
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+}
+header menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #039571;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+header menu a.active {
+  color: #039571;
+}
+header menu a:hover::after {
+  width: 100%;
+}
+header div.buttons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: end;
+  grid-gap: 25px;
+}
+header div.buttons button {
+  min-width: unset;
+}
+header div.buttons a.social {
+  display: block;
+  line-height: 0;
+}
+@media (max-width: 480px) {
+  header div.buttons a.social {
+    display: none;
+  }
+}
+header div.buttons a.social:hover svg path {
+  fill: #039571;
+}
+header div.menu {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  background-color: #228482;
+  width: 60px;
+  height: 100%;
+}
+@media (max-width: 960px) {
+  header div.menu {
+    display: grid;
+  }
+}
+header.sticky {
+  -webkit-box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.15);
+}
+header.sticky a.logotype {
+  margin-bottom: unset;
+  width: 103px;
+}
+@media (max-width: 1280px) {
+  header.sticky a.logotype {
+    width: 80px;
+  }
+}
+@media (max-width: 960px) {
+  header.sticky a.logotype {
+    width: 106px;
+  }
+}
+header.menu section.menu {
+  grid-template-rows: 1fr;
+}
+
+section.menu {
+  display: none;
+  color: white;
+  background-color: #1F8482;
+  grid-template-rows: 0fr;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+@media (max-width: 960px) {
+  section.menu {
+    display: grid;
+  }
+}
+section.menu div.container {
+  display: grid;
+  overflow: hidden;
+}
+section.menu div.mobile_menu {
+  padding-top: 64px;
+  padding-bottom: 64px;
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-columns: auto;
+  justify-items: center;
+  gap: 20px;
+}
+section.menu div.mobile_menu a {
+  padding: 10px;
+  font-size: 14px;
+}
+
+footer {
+  background-color: #1F8482;
+}
+footer a.logotype {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  width: 133px;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+@media (max-width: 640px) {
+  footer a.logotype {
+    position: relative;
+    margin: 0 auto;
+  }
+}
+footer a.logotype img {
+  width: 100%;
+}
+footer menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  padding-top: 62px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+@media (max-width: 1280px) {
+  footer menu {
+    gap: unset;
+  }
+}
+@media (max-width: 960px) {
+  footer menu {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+    padding-left: 153px;
+  }
+}
+@media (max-width: 640px) {
+  footer menu {
+    padding-left: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 41px;
+    grid-gap: 10px;
+  }
+}
+footer menu a {
+  padding: 10px;
+  font-size: 14px;
+}
+footer div.bottom {
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 3fr 6.75fr -webkit-max-content -webkit-max-content;
+  grid-template-columns: 3fr 6.75fr max-content max-content;
+  grid-gap: 124px;
+  padding-top: 34px;
+  padding-bottom: 48px;
+}
+@media (max-width: 960px) {
+  footer div.bottom {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
+@media (max-width: 640px) {
+  footer div.bottom {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+    grid-gap: 36px;
+  }
+}
+footer div.bottom span.copyright {
+  max-width: 252px;
+}
+@media (max-width: 640px) {
+  footer div.bottom span.copyright {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+}
+@media (max-width: 640px) {
+  footer div.bottom a.social {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+footer div.bottom a.social svg path {
+  fill: white;
+}
+@media (max-width: 640px) {
+  footer div.bottom a.mwi {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
+}
+footer div.bottom a {
+  text-decoration: underline;
+}
+footer div.bottom a:hover {
+  text-decoration: none;
+}
+
+html:has(dialog[open]) {
+  overflow-y: hidden;
+  margin-right: var(--scrollbar-width);
+}
+
+dialog {
+  margin: auto;
+}
+dialog svg.cross {
+  position: fixed;
+  top: var(--section-side-gap);
+  right: var(--section-side-gap);
+  cursor: pointer;
+  justify-self: end;
+}
+dialog div.container {
+  padding: var(--section-side-gap);
+  max-width: 640px;
+}
+dialog::-ms-backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.75);
+}
+dialog::backdrop {
+  position: fixed;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.75);
+}
+dialog::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}/*# sourceMappingURL=common.css.map */

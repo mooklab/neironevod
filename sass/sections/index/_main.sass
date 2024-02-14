@@ -1,0 +1,105 @@
+section.main
+
+    div.description
+        z-index: 1
+        position: relative
+        align-self: center
+        max-width: 709px
+        padding-top: 150px
+        padding-bottom: 150px
+        max-width: 50%
+        +screen(s)
+            padding-top: unset
+            padding-bottom: 60px
+            text-align: center
+            max-width: unset
+            margin-top: -40px
+
+        h1
+            transition-delay: 150ms
+            +screen(l)
+                font-size: 60px
+            +screen(m)
+                font-size: 45px
+
+        h2
+            transition-delay: 150ms
+            +screen(l)
+                font-size: 32px
+            +screen(m)
+                font-size: 24px
+
+        & > span
+            transition-delay: 600ms
+            display: block
+            color: #60CEB0
+            max-width: 510px
+            margin-top: 27px
+
+        div.buttons
+            transition-delay: 750ms
+            display: grid
+            grid-template-columns: repeat(2, max-content)
+            grid-gap: 17px
+            margin-top: 46px
+            +screen(s)
+                justify-items: center
+                grid-template-columns: 1fr
+                grid-gap: 20px
+                margin-top: 24px
+
+            button
+                font-family: 'Roboto Condensed'
+                font-size: 18px
+                line-height: 23px
+                padding: 20px 30px
+                +screen(s)
+                    order: 2
+
+            div.rating
+                display: grid
+                grid-gap: 7px
+                border: 1px solid #10ab86
+                border-radius: 999px
+                font-size: 14px
+                line-height: 11px
+                padding: 10px 24px
+                text-align: center
+                width: max-content
+                +screen(s)
+                    order: 1
+
+                span
+                    height: 11px
+
+                div.stars
+                    display: grid
+                    grid-auto-flow: column
+                    grid-auto-columns: max-content
+                    grid-gap: 3px
+
+
+    div.background
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        grid-column: breakout
+        +screen(1600px)
+            width: calc(100% + var(--gap) * 2)
+            left: calc(var(--gap) * -1)
+        +screen(s)
+            position: relative
+            height: 462px
+
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+            object-position: right top
+            +screen(1600px)
+                object-fit: cover
+                object-position: center center
+            +screen(s)
+                object-position: 72% center

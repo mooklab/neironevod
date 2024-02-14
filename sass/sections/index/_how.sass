@@ -1,0 +1,128 @@
+section.how
+    scroll-margin-top: var(--header-height)
+    background-color: #1E8482
+    padding-top: 100px
+    padding-bottom: 80px
+    +screen(m)
+        padding-top: 33px
+
+    div.container
+        display: grid
+        align-items: start
+        grid-template-columns: repeat(2, 1fr)
+        +screen(m)
+            grid-template-columns: 1fr
+            grid-gap: 34px
+
+
+    div.other
+        display: grid
+        justify-items: center
+        position: relative
+        background-color: #C3051C
+        border-radius: 60px
+        padding-left: calc(362px - 83px + 28px)
+        padding-top: 81px
+        padding-bottom: 61px
+        padding-right: 53px
+        margin-right: 63px
+        +screen(l)
+            padding-top: unset
+            padding-left: 30px
+            padding-right: 30px
+            margin-top: 90px
+            text-align: center
+            margin-right: 34px
+        +screen(m)
+            margin-right: unset
+
+        img.robot
+            position: absolute
+            top: -13px
+            left: -85px
+            width: 362px
+            +screen(l)
+                position: relative
+                left: unset
+                top: unset
+                margin-top: -90px
+                width: 232px
+
+        h3
+            font-family: 'Roboto Condensed'
+            font-size: 40px
+            margin-bottom: 34px
+
+        ul
+            display: grid
+            grid-gap: 20px
+            width: 100%
+            max-width: 328px
+            +screen(l)
+                // max-width: unset
+            li
+                position: relative
+                display: block
+                padding: 20px 0
+                &::after
+                    content: ''
+                    position: absolute
+                    bottom: -10px
+                    left: 0
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background-color: rgba(255,255,255,0.15)
+
+                &:last-child
+                    &::after
+                        display: none
+
+    div.description
+        h2
+            margin-bottom: 24px
+            +screen(m)
+                text-align: center
+                font-size: 40px
+
+        & > span
+            display: block
+            font-size: 30px
+            font-weight: 300
+            color: #77C3C1
+            +screen(m)
+                font-size: 24px
+                text-align: center
+
+        h3
+            font-size: 40px
+            margin-top: 68px
+            margin-bottom: 72px
+            +screen(m)
+                margin-top: 64px
+                margin-bottom: 38px
+                text-align: center
+            
+        ul
+            display: grid
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 50px
+            +screen(s)
+                grid-template-columns: 1fr
+
+            li
+                position: relative
+
+            span
+                display: block
+                margin-left: 41px
+
+            img
+                position: absolute
+                top: 0
+                left: 0
+
+            button
+                padding: 16.5px 31px
+                +screen(m)
+                    margin: 0 auto

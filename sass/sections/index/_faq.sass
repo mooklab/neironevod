@@ -1,0 +1,91 @@
+section.faq
+    scroll-margin-top: var(--header-height)
+    padding-top: 55px
+    padding-bottom: 45px
+    background-color: white
+    color: black
+    +screen(s)
+        padding-top: 35px
+        padding-bottom: 44px
+
+    div.title
+        display: grid
+        grid-gap: 16px
+        span
+            font-size: 30px
+            font-weight: 300
+            color: #8B9492
+            +screen(m)
+                font-size: 24px
+
+    div.list
+        margin-top: 38px
+        margin-bottom: 48px
+        border-top: 1px solid rgba(0,0,0,0.1)
+        max-width: calc(100% - 376px - 73px)
+        +screen(l)
+            max-width: calc(100% - 300px - 40px)
+        +screen(m)
+            max-width: unset
+            margin-top: 33px
+            margin-bottom: 34px
+
+    div.accordion
+        div.accordion_caption
+            cursor: pointer
+            display: grid
+            grid-template-columns: 1fr max-content
+            grid-gap: 24px
+            border-bottom: 1px solid rgba(0,0,0,0.1)
+            
+            strong
+                font-size: 30px
+                font-weight: 400
+                text-transform: uppercase
+                padding-top: 30px
+                padding-bottom: 30px
+                +screen(l)
+                    font-size: 24px
+
+            &::after
+                content: '+'
+                font-size: 40px
+                line-height: 30px
+                color: #039571
+                padding-top: 30px
+
+        div.accordion_childwrap
+            color: #8B9492
+            padding-left: 157px
+            padding-top: 40px
+            padding-bottom: 49px
+            border-bottom: 1px solid rgba(0,0,0,0)
+            +screen(l)
+                padding-left: 40px
+            +screen(m)
+                padding-left: 30px
+
+        &.open
+            div.accordion_caption
+                &::after
+                    content: '-'
+                    font-size: 80px
+            div.accordion_childwrap
+                border-bottom: 1px solid rgba(0,0,0,0.1)
+
+    button
+        justify-self: center
+        font-family: 'Roboto Condensed'
+        padding: 16.5px 41.5px
+        +screen(s)
+            min-width: 205px
+
+    img.robot
+        position: absolute
+        top: 127px
+        right: 0
+        width: 376px
+        +screen(l)
+            width: 300px
+        +screen(m)
+            display: none

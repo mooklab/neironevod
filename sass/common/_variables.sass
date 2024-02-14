@@ -1,0 +1,26 @@
+$color-dark: #2E3744
+$color-yellow: #F6C42C
+$color-orange: #E5AC00
+$color-light-gray: #F7F7F8
+$color-gray: #E9EBED
+
+$content-maxwidth: 1540px
+
+\:root
+    --gap: 30px
+
+    --full: minmax(var(--gap), 1fr)
+    --content: min(1540px, 100% - var(--gap) * 2)
+    --breakout: minmax(0, 190px)
+
+    --header-height: 103px
+
+@media (max-width: 960px)
+    \:root
+        --gap: 20px
+        --header-height: 80px
+
+@media (max-width: 640px)
+    \:root
+        --gap: 10px
+        --header-height: 105px
