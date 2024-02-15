@@ -670,7 +670,20 @@ header a.logotype {
   }
 }
 header a.logotype img {
+  display: none;
   width: 100%;
+}
+header a.logotype.standart img.standart {
+  display: block;
+}
+header a.logotype.brrr img.brrr {
+  display: block;
+}
+header a.logotype.sad img.sad {
+  display: block;
+}
+header a.logotype.happy img.happy {
+  display: block;
 }
 header menu {
   display: grid;

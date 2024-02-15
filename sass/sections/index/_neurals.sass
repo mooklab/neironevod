@@ -96,12 +96,11 @@ section.chatgpt
         &.one
             position: absolute
             top: 48px
-            // left: 670px
-            left: 770px
+            left: 670px
             opacity: 0
             transition: all .5s
             transition-delay: 700ms
-            transform: translateY(0%)
+            transform: translateX(-25%)
             max-width: 320px
             +screen(1080px)
                 left: unset
@@ -118,13 +117,11 @@ section.chatgpt
         &.two
             position: absolute
             top: 203px
-            // left: 580px
-            left: 500px
+            left: 580px
             opacity: 0
             transition: all .5s
             transition-delay: 1000ms
-            transform: translateY(0%)
-
+            transform: translateX(-25%)
             max-width: 320px
             font-size: 14px
             max-width: 410px
@@ -151,10 +148,10 @@ section.chatgpt
         width: 411px
         position: absolute
         z-index: 7
-        // left: 84px
-        left: 0px
+        left: 84px
         opacity: 0
         transition: all .7s
+        transform: translateX(-25%)
         +screen(1080px)
             left: unset
             right: 55%
@@ -163,15 +160,11 @@ section.chatgpt
             width: 328px
             right: 210px
 
-    div.block.animate.start ~ img.robot
+    &.animate.start img.robot,
+    &.animate.start div.message.one,
+    &.animate.start div.message.two
         opacity: 1
-        left: 84px
-    div.block.animate.start ~ div.message.one
-        left: 670px
-        opacity: 1
-    div.block.animate.start ~ div.message.two
-        left: 580px
-        opacity: 1
+        transform: translateX(0%)
 
 section.midjourney
     padding-top: calc(510px + 85px - 40px)
@@ -197,13 +190,11 @@ section.midjourney
         &.one
             position: absolute
             top: 48px
-            // right: 305px
-            right: 350px
+            right: 305px
             opacity: 0
             transition: all .5s
             transition-delay: 1100ms
-            transform: translateY(0%)
-
+            transform: translateX(-25%)
             max-width: 320px
             +screen(m)
                 display: none
@@ -215,12 +206,11 @@ section.midjourney
         &.two
             position: absolute
             top: 183px
-            // left: 155px
-            left: 100px
+            left: 155px
             opacity: 0
             transition: all .5s
             transition-delay: 500ms
-            transform: translateY(0%)
+            transform: translateX(-25%)
             
             max-width: 320px
             max-width: 410px
@@ -264,7 +254,7 @@ section.midjourney
         left: 0
         opacity: 0
         transition: all .5s
-        transition-delay: 1200ms
+        transition-delay: 1500ms
         height: 510px
         width: 100%
         object-fit: contain
@@ -287,11 +277,11 @@ section.midjourney
         width: 333px
         position: absolute
         top: 95px
-        // right: 105px
-        right: 50px
+        right: 105px
         opacity: 0
         transition: all .5s
         transition-delay: 800ms
+        transform: translateX(25%)
 
         z-index: 4
         +screen(m)
@@ -306,14 +296,9 @@ section.midjourney
         margin-bottom: 45px
         justify-self: center
 
-    div.block.animate.start ~ div.message.one
-        left: 670px
+    &.animate.start div.message.one,
+    &.animate.start div.message.two,
+    &.animate.start img.robot,
+    &.animate.start img.image
         opacity: 1
-    div.block.animate.start ~ div.message.two
-        left: 155px
-        opacity: 1
-    div.block.animate.start ~ img.robot
-        right: 105px
-        opacity: 1
-    div.block.animate.start ~ img.image
-        opacity: 1
+        transform: translateX(0%)

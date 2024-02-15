@@ -299,15 +299,15 @@ section.chatgpt div.message div.text span.green {
 section.chatgpt div.message.one {
   position: absolute;
   top: 48px;
-  left: 770px;
+  left: 670px;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transition-delay: 700ms;
           transition-delay: 700ms;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%);
   max-width: 320px;
 }
 @media (max-width: 1080px) {
@@ -332,15 +332,15 @@ section.chatgpt div.message.one img {
 section.chatgpt div.message.two {
   position: absolute;
   top: 203px;
-  left: 500px;
+  left: 580px;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transition-delay: 1000ms;
           transition-delay: 1000ms;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%);
   max-width: 320px;
   font-size: 14px;
   max-width: 410px;
@@ -376,10 +376,13 @@ section.chatgpt img.robot {
   width: 411px;
   position: absolute;
   z-index: 7;
-  left: 0px;
+  left: 84px;
   opacity: 0;
   -webkit-transition: all 0.7s;
   transition: all 0.7s;
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%);
 }
 @media (max-width: 1080px) {
   section.chatgpt img.robot {
@@ -394,17 +397,11 @@ section.chatgpt img.robot {
     right: 210px;
   }
 }
-section.chatgpt div.block.animate.start ~ img.robot {
+section.chatgpt.animate.start img.robot, section.chatgpt.animate.start div.message.one, section.chatgpt.animate.start div.message.two {
   opacity: 1;
-  left: 84px;
-}
-section.chatgpt div.block.animate.start ~ div.message.one {
-  left: 670px;
-  opacity: 1;
-}
-section.chatgpt div.block.animate.start ~ div.message.two {
-  left: 580px;
-  opacity: 1;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 section.midjourney {
@@ -435,15 +432,15 @@ section.midjourney div.message div.text span.green {
 section.midjourney div.message.one {
   position: absolute;
   top: 48px;
-  right: 350px;
+  right: 305px;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transition-delay: 1100ms;
           transition-delay: 1100ms;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%);
   max-width: 320px;
 }
 @media (max-width: 960px) {
@@ -460,15 +457,15 @@ section.midjourney div.message.one img {
 section.midjourney div.message.two {
   position: absolute;
   top: 183px;
-  left: 100px;
+  left: 155px;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transition-delay: 500ms;
           transition-delay: 500ms;
-  -webkit-transform: translateY(0%);
-      -ms-transform: translateY(0%);
-          transform: translateY(0%);
+  -webkit-transform: translateX(-25%);
+      -ms-transform: translateX(-25%);
+          transform: translateX(-25%);
   max-width: 320px;
   max-width: 410px;
 }
@@ -530,8 +527,8 @@ section.midjourney img.image {
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
-  -webkit-transition-delay: 1200ms;
-          transition-delay: 1200ms;
+  -webkit-transition-delay: 1500ms;
+          transition-delay: 1500ms;
   height: 510px;
   width: 100%;
   -o-object-fit: contain;
@@ -566,12 +563,15 @@ section.midjourney img.robot {
   width: 333px;
   position: absolute;
   top: 95px;
-  right: 50px;
+  right: 105px;
   opacity: 0;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transition-delay: 800ms;
           transition-delay: 800ms;
+  -webkit-transform: translateX(25%);
+      -ms-transform: translateX(25%);
+          transform: translateX(25%);
   z-index: 4;
 }
 @media (max-width: 960px) {
@@ -591,20 +591,11 @@ section.midjourney > button {
   margin-bottom: 45px;
   justify-self: center;
 }
-section.midjourney div.block.animate.start ~ div.message.one {
-  left: 670px;
+section.midjourney.animate.start div.message.one, section.midjourney.animate.start div.message.two, section.midjourney.animate.start img.robot, section.midjourney.animate.start img.image {
   opacity: 1;
-}
-section.midjourney div.block.animate.start ~ div.message.two {
-  left: 155px;
-  opacity: 1;
-}
-section.midjourney div.block.animate.start ~ img.robot {
-  right: 105px;
-  opacity: 1;
-}
-section.midjourney div.block.animate.start ~ img.image {
-  opacity: 1;
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
 }
 
 section.how {
