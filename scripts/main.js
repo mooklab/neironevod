@@ -30,11 +30,12 @@ let inactivityTime = () => {
     }
 
     function fn() {
-        logotype.classList.remove('sad')
-        logotype.classList.remove('happy')
-        logotype.classList.remove('standart')
-        logotype.classList.add('brrr')
-        console.log('123')
+        if( !logotype.classList.contains('sad') && !logotype.classList.contains('happy')) {
+            logotype.classList.remove('sad')
+            logotype.classList.remove('happy')
+            logotype.classList.remove('standart')
+            logotype.classList.add('brrr')
+        }
     }
 }
   
