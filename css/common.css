@@ -546,6 +546,61 @@ button.light:hover, a.button.light:hover {
   background-color: #0bf0ba;
 }
 
+abbr[data-title] {
+  position: relative;
+  cursor: help;
+  padding-right: 30px;
+}
+abbr[data-title]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-image: url(../images/info.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+abbr[data-title]::before {
+  content: attr(data-title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  font-size: 12px;
+  background-color: white;
+  padding: 4px 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0px;
+  width: 240px;
+  max-width: 100vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  z-index: -9;
+  pointer-events: none;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+@media (max-width: 640px) {
+  abbr[data-title]::before {
+    -webkit-transform: translateX(-75%);
+        -ms-transform: translateX(-75%);
+            transform: translateX(-75%);
+  }
+}
+abbr[data-title]:hover::before {
+  margin-bottom: 10px;
+  opacity: 999;
+}
+
 .animate {
   opacity: 0;
   -webkit-filter: blur(px);

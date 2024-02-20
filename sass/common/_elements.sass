@@ -251,6 +251,51 @@ button, a.button
         &:hover
             background-color: #0bf0ba
 
+abbr
+    &[data-title] 
+        position: relative
+        cursor: help
+        padding-right: 30px
+
+        &::after
+            content: ''
+            position: absolute
+            top: 0
+            right: 0
+            display: inline-block
+            width: 20px
+            height: 20px
+            background-image: url(../images/info.svg)
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: contain
+            vertical-align: middle
+            margin-left: 10px
+
+        &::before
+            content: attr(data-title)
+            position: absolute
+            bottom: 100%
+            left: 50%
+            font-size: 12px
+            background-color: white
+            padding: 4px 6px
+            border-radius: 6px
+            box-shadow: 10px 10px 30px rgba(0,0,0,.1)
+            margin-bottom: 0px
+            width: 240px
+            max-width: 100vw
+            transition: all .3s
+            opacity: 0
+            z-index: -9
+            pointer-events: none
+            transform: translateX(-50%)
+            +screen(s)
+                transform: translateX(-75%)
+
+        &:hover::before
+            margin-bottom: 10px
+            opacity: 999
 
 .animate
     opacity: 0
