@@ -549,13 +549,12 @@ button.light:hover, a.button.light:hover {
 abbr[data-title] {
   position: relative;
   cursor: help;
-  padding-right: 30px;
 }
 abbr[data-title]::after {
   content: "";
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -20px;
+  right: -20px;
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -564,7 +563,6 @@ abbr[data-title]::after {
   background-repeat: no-repeat;
   background-size: contain;
   vertical-align: middle;
-  margin-left: 10px;
 }
 abbr[data-title]::before {
   content: attr(data-title);
@@ -597,7 +595,7 @@ abbr[data-title]::before {
   }
 }
 abbr[data-title]:hover::before {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   opacity: 999;
 }
 
