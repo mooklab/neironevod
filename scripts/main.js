@@ -2,6 +2,7 @@ header = document.querySelector('header')
 logotype = header.querySelector('a.logotype')
 how = document.querySelector('section.how div.other')
 buttons = document.querySelectorAll('button, a.button')
+neurals = document.querySelectorAll('section.price div.neurals div.neural')
 
 window.addEventListener('scroll', event => {
     this.scrollY > 10 ? header.classList.add("sticky") : header.classList.remove("sticky")
@@ -67,5 +68,12 @@ buttons.forEach( button => {
         logotype.classList.add('standart')
         logotype.classList.remove('sad')
         logotype.classList.remove('happy')
+    })
+})
+
+
+neurals.forEach( neural => {
+    neural.addEventListener('click', event => {
+        window.innerWidth < 960 && (window.location.href = '#tarrifs')
     })
 })

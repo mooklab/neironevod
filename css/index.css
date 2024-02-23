@@ -1025,6 +1025,7 @@ section.price div.tarrifs {
   display: grid;
   grid-template-columns: 2fr 3fr;
   margin-top: 42px;
+  scroll-margin-top: calc(var(--header-height) + 30px);
 }
 @media (max-width: 960px) {
   section.price div.tarrifs {
